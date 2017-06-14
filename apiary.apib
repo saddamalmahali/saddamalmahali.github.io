@@ -1,0 +1,31 @@
+FORMAT: 1A
+HOST: http://128.199.239.100
+# DMCH API
+
+DMCH API memungkinkan client mengakses API yang telah tersedia di portal DMCH
+
+
+## Authentication [/oauth/token]
+Token merupakan kode authenticate yang 
+
+### Get Token [POST]
++ Request (application/x-www-form-urlencoded)
+    + Body
+            grant_type:password
+            client_id:2
+            client_secret:secret
+            username:username
+            password:pass
+            scope:
+    
+        
+        
+    
++ Response 200 (application/json)
+
+        {
+            "token_type": "Bearer",
+            "expires_in": 31536000,
+            "access_token": "tokenaccess",
+            "refresh_token": "tokenrefresh"
+        }
